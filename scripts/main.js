@@ -7,6 +7,7 @@ function playerWalk(){
     player.src = walking[currentWalk];
     currentWalk = (currentWalk + 1) % walking.length; 
    }, 100);
+
    
 }
 playerWalk();
@@ -24,3 +25,7 @@ document.addEventListener('keydown', event => {
       jump();
    }
 });
+}
+
+
+
