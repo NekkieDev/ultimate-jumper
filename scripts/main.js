@@ -7,7 +7,20 @@ function playerWalk(){
     player.src = walking[currentWalk];
     currentWalk = (currentWalk + 1) % walking.length; 
    }, 100);
+   
 }
-playerWalk()
+playerWalk();
 
+const jump = () => {
+   player.classList.add('jump');
 
+   setTimeout(() => {
+       player.classList.remove('jump');
+   }, 500);
+};
+
+document.addEventListener('keydown', event => {
+   if (event.key === ' ') {
+      jump();
+   }
+});
