@@ -8,8 +8,12 @@ Um pequeno jogo de plataforma, baseado no jogo T-Rex Game.
 
 - Toda a janela(body e html) devem ter o mesmo tamanho(970x250 Billboard)
 - fazer a animação do personagem com imagens estaticas
+
+- mecanismo de pulo eixo x e y
+- reconhecer a colisão do personagem com o obstaculo
 - reconhecer a colisão do personagem com o obstaculo
 - mecanismo de pulo eixo x e y
+
 
 
 ## Aprendizados
