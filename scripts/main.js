@@ -16,11 +16,15 @@ const jump = () => {
 
    setTimeout(() => {
        player.classList.remove('jump');
-   }, 500);
+   }, 600);
 };
+
+
 
 document.addEventListener('keydown', event => {
    if (event.key === ' ') {
       jump();
    }
 });
+
+
