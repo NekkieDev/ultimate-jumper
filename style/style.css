@@ -19,7 +19,7 @@ html {
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: #1eb5c9;
+  background: linear-gradient(to bottom, #22c1c3, #fdbb2d);
   display: flex;
   justify-content: flex-start;
   align-items: end;
@@ -50,16 +50,7 @@ html {
 
 #obstacle {
   height: 50px;
+  right: 0;
   width: 50px;
   position: absolute;
-  animation: obstacleAnimation 2s infinite linear;
-}
-
-@keyframes obstacleAnimation {
-  from {
-      right: -80px;
-}
-  to {
-    right: 100%;
-  }
 }
