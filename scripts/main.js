@@ -7,8 +7,6 @@ function playerWalk(){
     player.src = walking[currentWalk];
     currentWalk = (currentWalk + 1) % walking.length; 
    }, 100);
-
-   
 }
 playerWalk();
 
@@ -20,8 +18,7 @@ function jump() {
    }, 800);
 };
 let obstacleInterval;
-let obstaclePosition = window.innerWidth;
-
+let obstaclePosition = 960;
 function generateObstacle(){
    obstacleInterval = setInterval(() => {
       const randomGenerate = Math.random() * 2000 + 1000
@@ -30,7 +27,7 @@ function generateObstacle(){
          moveObstacle();
          
       }, randomGenerate);
-   }, 100);
+   }, 1000);
 }
 
 function moveObstacle() {
@@ -40,13 +37,13 @@ function moveObstacle() {
 
       if (obstaclePosition < 0) {
          clearInterval(obstacleMoveInterval);
-         obstaclePosition = window.innerWidth;
+         obstaclePosition = 960;
       }
 
       if (checkCollision()) {
          clearInterval(obstacleMoveInterval);
          clearInterval(obstacleInterval);
-         alert('Fim de jogo');
+         location.reload();
       }
    }, 20);
 }
@@ -54,7 +51,6 @@ function moveObstacle() {
 function checkCollision() {
    const playerPos = player.getBoundingClientRect();
    const obstaclePos = obstacle.getBoundingClientRect() ;
-
    return(
       playerPos.bottom >= obstaclePos.top &&
       playerPos.top <= obstaclePos.bottom &&
